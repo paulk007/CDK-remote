@@ -24,6 +24,7 @@ export class WorkshopPipelineStack extends cdk.Stack {
         });
 
         const deploy = new WorkshopPipelineStage(this, "Deploy");
+        //adding comment to create git commit
         const deployStage = pipeline.addStage(deploy);
 
     }
