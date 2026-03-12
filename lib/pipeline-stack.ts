@@ -13,7 +13,7 @@ export class WorkshopPipelineStack extends cdk.Stack {
             pipelineName: "WorkshopPipeline",
             pipelineType: PipelineType.V2,
             synth: new CodeBuildStep("SynthStep", {
-                input: CodePipelineSource.gitHub("paulk007/CDK-remote.git", "main", {
+                input: CodePipelineSource.gitHub("paulk007/CDK-remote", "main", {
                     authentication: cdk.SecretValue.secretsManager("mytoken"), // see note below
                 }),
                 commands: [
