@@ -7,3 +7,7 @@ git config protocol.s3.allow always
 # Push your code to S3
 git push --set-upstream s3-origin main
 
+git add . 
+git commit -m "Switch pipeline to GitHub source"
+git push origin main
+cdk deploy WorkshopPipelineStack
