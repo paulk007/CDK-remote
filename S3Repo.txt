@@ -1,0 +1,9 @@
+# Add S3 remote (use the bucket name from CDK output)
+git remote add s3-origin s3+zip://workshop-git-992225897806-ap-southeast-2/workshop-repo
+
+# Configure git to allow s3 protocol
+git config protocol.s3.allow always
+
+# Push your code to S3
+git push --set-upstream s3-origin main
+
